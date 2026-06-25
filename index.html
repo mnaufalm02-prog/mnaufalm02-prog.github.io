@@ -2,227 +2,204 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scfamale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muhammad Naufal Maulana — Portfolio</title>
-<meta name="description" content="Portfolio profesional di bidang IT, Network dan Infrastructure.">
-
+<meta name="description" content="Portfolio Muhammad Naufal Maulana — IT Support, Network & Infrastructure, IoT Development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  /* ====== RESET & VARIABLES ====== */
-  :root{
-    --bg:#0b0f14;
-    --bg-soft:#11161d;
-    --card:#151b23;
-    --border:#232b35;
-    --text:#e9edf2;
-    --text-dim:#9aa6b2;
-    --accent:#3ddc97;
-    --accent-soft:rgba(61,220,151,.12);
-    --radius:14px;
-    --maxw:1000px;
-  }
-  [data-theme="light"]{
-    --bg:#f6f8fa;
-    --bg-soft:#ffffff;
-    --card:#ffffff;
-    --border:#e3e8ee;
-    --text:#15202b;
-    --text-dim:#5b6773;
-    --accent:#0fa968;
-    --accent-soft:rgba(15,169,104,.10);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-    line-height:1.6;
-    transition:background .3s ease, color .3s ease;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  section{padding:90px 20px;max-width:var(--maxw);margin:0 auto;}
-  .eyebrow{
-    color:var(--accent);
-    font-size:13px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    font-weight:600;
-    margin-bottom:10px;
-    display:block;
-  }
-  h2{font-size:28px;margin-bottom:30px;}
-  .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:24px;
-  }
+:root{
+  --bg:#070d16;
+  --bg-soft:#0c1520;
+  --card:#0f1d2e;
+  --card-hover:#142033;
+  --border:#1c2d42;
+  --border-soft:#253a52;
+  --text:#ddeaf8;
+  --text-dim:#7a9cc0;
+  --text-muted:#3e5a7a;
+  --accent:#EF9F27;
+  --accent-soft:rgba(239,159,39,.13);
+  --accent-glow:rgba(239,159,39,.22);
+  --accent-dim:rgba(239,159,39,.06);
+  --radius:14px;
+  --maxw:1020px;
+  --font:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+[data-theme="light"]{
+  --bg:#eaf2fb;
+  --bg-soft:#f5f9ff;
+  --card:#ffffff;
+  --card-hover:#eef5ff;
+  --border:#c8daee;
+  --border-soft:#a8c4e0;
+  --text:#0a1828;
+  --text-dim:#2e4d72;
+  --text-muted:#5a7898;
+  --accent:#c97d0a;
+  --accent-soft:rgba(201,125,10,.10);
+  --accent-glow:rgba(201,125,10,.18);
+  --accent-dim:rgba(201,125,10,.05);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.65;transition:background .3s,color .3s;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+section{padding:88px 0;}
+.eyebrow{display:inline-block;font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;font-family:var(--mono);}
+h2{font-size:29px;font-weight:700;letter-spacing:-.4px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:border-color .2s;}
+.card:hover{border-color:var(--border-soft);}
+.section-divider{border:none;border-top:1px solid var(--border);}
 
-  /* ====== NAVBAR ====== */
-  header{
-    position:sticky;top:0;z-index:100;
-    background:rgba(11,15,20,.85);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
-  }
-  [data-theme="light"] header{background:rgba(246,248,250,.85);}
-  nav{
-    max-width:var(--maxw);margin:0 auto;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:16px 20px;
-  }
-  .logo{font-weight:700;font-size:18px;}
-  .logo span{color:var(--accent);}
-  .nav-links{display:flex;gap:24px;list-style:none;}
-  .nav-links a{font-size:14px;color:var(--text-dim);transition:color .2s;}
-  .nav-links a:hover{color:var(--accent);}
-  .nav-right{display:flex;align-items:center;gap:14px;}
-  .theme-btn{
-    background:var(--card);border:1px solid var(--border);
-    color:var(--text);border-radius:8px;width:36px;height:36px;
-    cursor:pointer;font-size:16px;
-  }
-  .menu-btn{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;}
+/* NAVBAR */
+header{position:sticky;top:0;z-index:200;background:rgba(7,13,22,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+[data-theme="light"] header{background:rgba(242,246,251,.9);}
+nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;}
+.logo{font-weight:700;font-size:17px;letter-spacing:-.3px;}
+.logo span{color:var(--accent);}
+.nav-links{display:flex;gap:4px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text-dim);padding:6px 11px;border-radius:8px;transition:.18s;}
+.nav-links a:hover{color:var(--text);background:var(--accent-soft);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.theme-btn{background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px;transition:.18s;}
+.theme-btn:hover{border-color:var(--accent);}
+.menu-btn{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;padding:4px;}
+@media(max-width:740px){
+  .nav-links{position:fixed;top:62px;left:0;right:0;background:var(--bg-soft);border-bottom:1px solid var(--border);flex-direction:column;padding:14px 20px;gap:4px;transform:translateY(-110%);transition:transform .25s ease;box-shadow:0 8px 24px rgba(0,0,0,.2);}
+  .nav-links.open{transform:translateY(0);}
+  .nav-links a{padding:10px 14px;font-size:14px;}
+  .menu-btn{display:block;}
+}
 
-  @media(max-width:720px){
-    .nav-links{
-      position:fixed;top:64px;left:0;right:0;
-      background:var(--bg-soft);border-bottom:1px solid var(--border);
-      flex-direction:column;padding:20px;gap:16px;
-      transform:translateY(-150%);transition:transform .25s ease;
-    }
-    .nav-links.open{transform:translateY(0);}
-    .menu-btn{display:block;}
-  }
+/* HERO */
+.hero{padding:76px 0 68px;}
+.hero-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+@media(max-width:680px){.hero-inner{grid-template-columns:1fr;}.avatar-wrap{display:none;}}
+.badge{display:inline-flex;align-items:center;gap:7px;background:var(--accent-soft);color:var(--accent);padding:5px 13px;border-radius:999px;font-size:12px;font-weight:600;margin-bottom:16px;font-family:var(--mono);}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+.hero h1{font-size:50px;line-height:1.1;margin-bottom:14px;letter-spacing:-.8px;font-weight:700;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero p.lead{color:var(--text-dim);max-width:560px;margin-bottom:28px;font-size:15px;}
+.btn-row{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:42px;}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:10px;font-weight:600;font-size:13.5px;border:1px solid var(--border);cursor:pointer;transition:.2s;font-family:var(--font);}
+.btn-accent{background:var(--accent);color:#1a0d00;border-color:var(--accent);}
+.btn-accent:hover{filter:brightness(1.08);}
+.btn-accent-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
+.btn-accent-outline:hover{background:var(--accent-soft);}
+.btn-ghost{background:transparent;color:var(--text);}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.stats{display:flex;flex-wrap:wrap;gap:30px;}
+.stat b{font-size:26px;display:block;font-weight:700;letter-spacing:-.5px;}
+.stat span{font-size:12px;color:var(--text-muted);}
+.stat b{color:var(--accent);}
+.avatar-wrap{width:155px;height:155px;border-radius:var(--radius);border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:62px;flex-shrink:0;box-shadow:0 0 48px var(--accent-glow);}
 
-  /* ====== HERO ====== */
-  .hero{padding-top:70px;padding-bottom:70px;}
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--accent-soft);color:var(--accent);
-    padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;
-    margin-bottom:20px;
-  }
-  .badge::before{content:"●";font-size:10px;}
-  .hero h1{font-size:48px;line-height:1.15;margin-bottom:18px;}
-  .hero h1 em{font-style:normal;color:var(--accent);}
-  .hero p.lead{color:var(--text-dim);max-width:600px;margin-bottom:30px;font-size:16px;}
-  .tag-list{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px;}
-  .tag{
-    background:var(--card);border:1px solid var(--border);
-    padding:6px 12px;border-radius:8px;font-size:13px;color:var(--text-dim);
-  }
-  .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:40px;}
-  .btn{
-    padding:12px 22px;border-radius:10px;font-weight:600;font-size:14px;muha
-    border:1px solid var(--border);cursor:pointer;transition:.2s;
-  }
-  .btn-primary{background:var(--accent);color:#06140d;border-color:var(--accent);}
-  .btn-primary:hover{opacity:.88;}
-  .btn-ghost{background:transparent;color:var(--text);}
-  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
-  .stats{display:flex;flex-wrap:wrap;gap:34px;}
-  .stat b{font-size:24px;color:var(--accent);display:block;}
-  .stat span{font-size:13px;color:var(--text-dim);}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+.about-grid p{color:var(--text-dim);margin-bottom:12px;font-size:14.5px;}
+.about-grid p b{color:var(--text);}
+.tag-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;}
+.tag{padding:5px 11px;border-radius:6px;font-size:12px;font-weight:500;}
+.tag-accent{background:var(--accent-soft);color:var(--accent);border:1px solid rgba(239,159,39,.2);}
+.info-list{display:flex;flex-direction:column;}
+.info-row{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;padding:10px 0;border-bottom:1px solid var(--border);gap:12px;}
+.info-row:last-child{border-bottom:none;}
+.info-row span:first-child{color:var(--text-dim);flex-shrink:0;}
+.info-row span:last-child{text-align:right;font-weight:500;}
 
-  /* ====== ABOUT ====== */
-  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;}
-  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
-  .about-grid p{color:var(--text-dim);margin-bottom:14px;}
-  .about-grid p b{color:var(--text);}
-  .info-list{display:flex;flex-direction:column;gap:14px;}
-  .info-row{display:flex;justify-content:space-between;font-size:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-  .info-row span:first-child{color:var(--text-dim);}
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;}
+.tl-item{position:relative;padding:22px 0 22px 32px;border-left:2px solid var(--border);}
+.tl-item:last-child{border-left-color:transparent;}
+.tl-item::before{content:"";position:absolute;left:-7px;top:26px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);}
+.tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:4px;}
+.tl-head h3{font-size:16px;font-weight:600;}
+.tl-date{font-size:11.5px;font-weight:600;font-family:var(--mono);padding:3px 10px;border-radius:99px;white-space:nowrap;align-self:flex-start;}
+.tl-date-accent{color:var(--accent);background:var(--accent-soft);}
+.tl-org{color:var(--text-dim);font-size:13.5px;margin-bottom:10px;font-weight:500;}
+.tl-item ul{padding-left:16px;color:var(--text-dim);font-size:13.5px;}
+.tl-item li{margin-bottom:5px;}
 
-  /* ====== TIMELINE (Experience/Education) ====== */
-  .timeline{display:flex;flex-direction:column;gap:22px;}
-  .tl-item{position:relative;padding-left:24px;border-left:2px solid var(--border);}
-  .tl-item::before{
-    content:"";position:absolute;left:-7px;top:4px;
-    width:12px;height:12px;border-radius:50%;
-    background:var(--accent);
-  }
-  .tl-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-bottom:4px;}
-  .tl-head h3{font-size:17px;}
-  .tl-head .date{color:var(--accent);font-size:13px;font-weight:600;}
-  .tl-org{color:var(--text-dim);font-size:14px;margin-bottom:10px;}
-  .tl-item ul{padding-left:18px;color:var(--text-dim);font-size:14px;}
-  .tl-item li{margin-bottom:6px;}
+/* SKILLS */
+.skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+@media(max-width:700px){.skill-groups{grid-template-columns:1fr;}}
+.skill-group{padding:20px;}
+.skill-group h4{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:18px;font-family:var(--mono);font-weight:600;}
+.sg-accent h4{color:var(--accent);}
+.skill-row{margin-bottom:15px;}
+.skill-row .label{display:flex;justify-content:space-between;font-size:13px;margin-bottom:7px;font-weight:500;}
+.skill-row .label span:last-child{color:var(--text-dim);font-family:var(--mono);font-size:11.5px;}
+.bar{height:5px;background:var(--border);border-radius:99px;overflow:hidden;}
+.bar-fill{display:block;height:100%;border-radius:99px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1);}
+.bar-fill-accent{background:linear-gradient(90deg,var(--accent),rgba(239,159,39,.4));}
 
-  /* ====== SKILLS ====== */
-  .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-  @media(max-width:700px){.skill-groups{grid-template-columns:1fr;}}
-  .skill-group h4{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px;}
-  .skill-row{margin-bottom:14px;}
-  .skill-row .label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;}
-  .bar{height:6px;background:var(--border);border-radius:99px;overflow:hidden;}
-  .bar i{display:block;height:100%;background:var(--accent);border-radius:99px;}
+/* RESEARCH */
+.research-card h3{font-size:18px;font-weight:700;letter-spacing:-.2px;margin-bottom:10px;}
+.research-card p{color:var(--text-dim);font-size:14px;line-height:1.8;}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:13px;margin-top:20px;}
+.result-box{background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;transition:.2s;}
+.result-box:hover{border-color:var(--accent);background:var(--accent-soft);}
+.result-box b{color:var(--accent);}
+.result-box b{display:block;font-size:22px;font-weight:700;margin-bottom:4px;}
+.result-box span{font-size:12px;color:var(--text-dim);}
+.tech-stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.tech-badge{background:var(--bg-soft);border:1px solid var(--border);padding:4px 10px;border-radius:6px;font-size:12px;color:var(--text-dim);font-family:var(--mono);}
 
-  /* ====== PROJECTS / RESEARCH ====== */
-  .project-card{margin-bottom:20px;}
-  .project-card h3{font-size:18px;margin-bottom:8px;}
-  .project-card p{color:var(--text-dim);font-size:14px;margin-bottom:12px;}
-  .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:16px;}
-  .result-box{background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
-  .result-box b{display:block;font-size:20px;color:var(--accent);}
-  .result-box span{font-size:12px;color:var(--text-dim);}
+/* CERTIFICATIONS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;}
+.cert-card{display:flex;gap:14px;align-items:flex-start;}
+.cert-icon-wrap{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.cert-icon-accent{background:var(--accent-soft);border:1px solid rgba(239,159,39,.2);}
+.cert-card h4{font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.4;}
+.cert-card p{font-size:12.5px;color:var(--text-dim);}
+.cert-date{font-size:11px;margin-bottom:5px;display:block;font-family:var(--mono);font-weight:600;}
+.cert-date-accent{color:var(--accent);}
 
-  /* ====== CERTIFICATES ====== */
-  .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
-  .cert-card{display:flex;gap:14px;}
-  .cert-icon{font-size:26px;}
-  .cert-card h4{font-size:15px;margin-bottom:4px;}
-  .cert-card p{font-size:13px;color:var(--text-dim);}
-  .cert-date{font-size:12px;color:var(--accent);margin-bottom:6px;display:block;}
+/* EDUCATION */
+.edu-card{display:flex;gap:16px;align-items:flex-start;}
+.edu-icon{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);border:1px solid rgba(239,159,39,.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.edu-card h3{font-size:16px;font-weight:600;margin-bottom:2px;}
+.edu-card .school{color:var(--text-dim);font-size:13.5px;margin-bottom:4px;}
+.edu-card .period{font-size:12px;color:var(--text-muted);font-family:var(--mono);margin-bottom:8px;}
+.gpa-badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600;padding:2px 10px;border-radius:99px;font-family:var(--mono);}
 
-  /* ====== CONTACT ====== */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
-  @media(max-width:760px){.contact-grid{grid-template-columns:1fr;}}
-  .contact-links{display:flex;flex-direction:column;gap:12px;}
-  .contact-links a{
-    display:flex;align-items:center;gap:10px;
-    background:var(--card);border:1px solid var(--border);
-    padding:12px 16px;border-radius:10px;font-size:14px;transition:.2s;
-  }
-  .contact-links a:hover{border-color:var(--accent);color:var(--accent);}
-  form{display:flex;flex-direction:column;gap:12px;}
-  form input, form textarea{
-    background:var(--bg-soft);border:1px solid var(--border);
-    color:var(--text);padding:12px 14px;border-radius:10px;
-    font-family:inherit;font-size:14px;
-  }
-  form textarea{min-height:120px;resize:vertical;}
-  form button{align-self:flex-start;}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr;}}
+.contact-links{display:flex;flex-direction:column;gap:10px;}
+.contact-link{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);padding:13px 16px;border-radius:10px;font-size:13.5px;transition:.2s;font-weight:500;}
+.cl-accent:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
+.contact-icon{font-size:17px;width:22px;text-align:center;}
+form{display:flex;flex-direction:column;gap:11px;}
+form input,form textarea{background:var(--bg-soft);border:1px solid var(--border);color:var(--text);padding:12px 14px;border-radius:10px;font-family:var(--font);font-size:14px;transition:.18s;outline:none;}
+form input:focus,form textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+form textarea{min-height:115px;resize:vertical;}
+form button{align-self:flex-start;}
 
-  footer{
-    border-top:1px solid var(--border);
-    padding:26px 20px;text-align:center;
-    font-size:13px;color:var(--text-dim);
-  }
-
-  .back-top{
-    position:fixed;right:20px;bottom:20px;
-    width:42px;height:42px;border-radius:50%;
-    background:var(--accent);color:#06140d;
-    display:flex;align-items:center;justify-content:center;
-    cursor:pointer;font-size:18px;border:none;
-    box-shadow:0 4px 14px rgba(0,0,0,.25);
-    opacity:0;pointer-events:none;transition:.25s;
-  }
-  .back-top.show{opacity:1;pointer-events:auto;}
-
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
+footer{border-top:1px solid var(--border);padding:26px 24px;text-align:center;font-size:13px;color:var(--text-muted);}
+footer a{color:var(--accent);}
+.back-top{position:fixed;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#1a0d00;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;border:none;box-shadow:0 4px 16px var(--accent-glow);opacity:0;pointer-events:none;transition:.25s;font-weight:700;}
+.back-top.show{opacity:1;pointer-events:auto;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--border-soft);border-radius:99px;}
 </style>
 </head>
 <body>
 
 <header>
   <nav>
-    <div class="logo"><span>Nau</span>fal</div>
+    <div class="logo"><span>Nau</span>fal<span style="color:var(--accent)">.</span></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#research">Research</a></li>
@@ -238,274 +215,338 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <span class="badge">Open to Opportunities</span>
-  <p class="eyebrow">Computer Engineering Graduate · IT Support &amp; · Network &amp; Infrastructure</p>
-  <h1><em>Muhammad </em>Naufal Maulana</h1>
-  <p class="lead">
-    Lulusan Diploma III, Program Studi Teknik Komputer dari Universitas Sriwijaya. Memiliki minat karir di
-    bidang IT. Memiliki kemampuan Problem Solving, Adaptif, dan Kerja sama tim.
-  </p>
-  <div class="btn-row">
-    <a href="#contact" class="btn btn-primary">Contact Me</a>
-    <a href="M. Naufal Maulana - CV.pdf" class="btn btn-ghost" target="_blank">View CV</a>
-    <a href="#experience" class="btn btn-ghost">View Experience →</a>
-  </div>
-  <div class="stats">
-    <div class="stat"><b>3.75</b><span>GPA / 4.00</span></div>
-    <div class="stat"><b>1×</b><span>Work Experience</span></div>
-    <div class="stat"><b>1st</b><span>Competition Winner</span></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <span class="badge"><span class="badge-dot"></span>Open to Opportunities</span>
+        <p class="eyebrow" style="color:var(--text-dim);display:block;margin-bottom:14px;">IT Support · Network & Infrastructure · IoT</p>
+        <h1><em>Muhammad</em><br>Naufal Maulana</h1>
+        <p class="lead">Lulusan D3 Teknik Komputer Universitas Sriwijaya dengan IPK 3.75/4.00. Berpengalaman di bidang IT Support, infrastruktur jaringan, dan IoT. Problem solver yang adaptif dan berorientasi pada hasil.</p>
+        <div class="btn-row">
+          <a href="#contact" class="btn btn-accent">✉ Contact Me</a>
+          <a href="M. Naufal Maulana - CV.pdf" class="btn btn-accent-outline" target="_blank">📄 View CV</a>
+          <a href="#experience" class="btn btn-ghost">Experience →</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>3.75</b><span>GPA / 4.00</span></div>
+          <div class="stat"><b>1+</b><span>Work Experience</span></div>
+          <div class="stat"><b>🥇</b><span>Competition Winner</span></div>
+        </div>
+      </div>
+      <div class="avatar-wrap">👨‍💻</div>
+    </div>
   </div>
 </section>
+
+<hr class="section-divider">
 
 <!-- ABOUT -->
 <section id="about">
-  <span class="eyebrow">01 — About</span>
-  <h2 class="reveal">About Me</h2>
-  <div class="about-grid">
-    <div class="card reveal">
-      <p>Saya <b>Muhammad Naufal Maulana</b>, lulusan Diploma III Teknik Komputer dari Universitas Sriwijaya dengan IPK <b>3.75/4.00</b>. Saya memiliki minat karir di bidang Teknologi Informasi, jaringan, infarstruktur, dan pengembangan IoT.</p>
-      <p>Familiar dengan <b>Pemrograman Mikrokontroler</b>, Maintenance PCs, Network Installation, dan integrasi sistem yang saya peroleh dari pengalaman akademik dan magang.</p>
-      <p>Saya seorang <b>fast learner</b>, adaptif, dan kolaboratif dengan kemampuan problem-solving yang baik serta motivasi tinggi untuk terus berkembang.</p>
-      <div class="tag-list">
-        <span class="tag">Technical Support</span>
-        <span class="tag">Network Engineer</span>
-        <span class="tag">Infrastructure IT</span>
-        <span class="tag">CCTV Systems</span>
-        <span class="tag">IoT Development</span>
-        <span class="tag">Fuzzy Logic</span>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">01 — About</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">About Me</h2>
+    <div class="about-grid">
+      <div class="card reveal">
+        <p>Saya <b>Muhammad Naufal Maulana</b>, lulusan Diploma III Teknik Komputer dari <b>Universitas Sriwijaya</b> dengan IPK <b>3.75/4.00</b>.</p>
+        <p>Memiliki pengalaman nyata di bidang IT Support, administrasi jaringan, dan infrastruktur CCTV. Familiar dengan <b>pemrograman mikrokontroler</b>, maintenance PC, konfigurasi router MikroTik, dan pengembangan sistem IoT.</p>
+        <p>Seorang <b>fast learner</b>, adaptif, dan kolaboratif — dengan kemampuan problem-solving yang baik serta motivasi tinggi untuk terus berkembang di dunia IT.</p>
+        <div class="tag-list">
+          <span class="tag tag-accent">Technical Support</span>
+          <span class="tag tag-accent">Network Engineer</span>
+          <span class="tag tag-accent">IT Infrastructure</span>
+          <span class="tag tag-accent">CCTV Systems</span>
+          <span class="tag tag-accent">IoT Development</span>
+          <span class="tag tag-accent">Fuzzy Logic</span>
+          <span class="tag tag-accent">MikroTik</span>
+          <span class="tag tag-accent">Linux</span>
+        </div>
       </div>
-    </div>
-    <div class="card reveal">
-      <h4 style="margin-bottom:16px;color:var(--accent);font-size:13px;letter-spacing:1px;text-transform:uppercase;">// Info</h4>
-      <div class="info-list">
-        <div class="info-row"><span>Name</span><span>Muhammad Naufal Maulana</span></div>
-        <div class="info-row"><span>Location</span><span>Palembang, Indonesia</span></div>
-        <div class="info-row"><span>Degree</span><span>A.Md.Kom. — Universitas Sriwijaya</span></div>
-        <div class="info-row"><span>GPA</span><span>3.75 / 4.00</span></div>
-        <div class="info-row"><span>Phone</span><span>+62 821-7809-3396</span></div>
-        <div class="info-row"><span>Mobility</span><span>Anywhere in Indonesia ✈</span></div>
-        <div class="info-row"><span>Status</span><span>● Open to Work</span></div>
+      <div class="card reveal">
+        <h4 style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-family:var(--mono);margin-bottom:14px;">// Personal Info</h4>
+        <div class="info-list">
+          <div class="info-row"><span>Name</span><span>Muhammad Naufal Maulana</span></div>
+          <div class="info-row"><span>Location</span><span>Palembang 🇮🇩</span></div>
+          <div class="info-row"><span>Degree</span><span>A.Md.Kom.</span></div>
+          <div class="info-row"><span>University</span><span>Universitas Sriwijaya</span></div>
+          <div class="info-row"><span>GPA</span><span style="color:var(--accent);font-weight:600;">3.75 / 4.00</span></div>
+          <div class="info-row"><span>Phone</span><span>+62 821-7809-3396</span></div>
+          <div class="info-row"><span>Mobility</span><span>Anywhere in Indonesia ✈</span></div>
+          <div class="info-row"><span>Status</span><span style="color:var(--accent);font-weight:600;">● Open to Work</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<hr class="section-divider">
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">02 — Education</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">Education</h2>
+    <div class="card reveal">
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <h3>Diploma III — Teknik Komputer</h3>
+          <div class="school">Universitas Sriwijaya · Palembang, Sumatera Selatan</div>
+          <div class="period">2022 – 2025</div>
+          <span class="gpa-badge">IPK: 3.75 / 4.00</span>
+          <p style="color:var(--text-dim);font-size:13.5px;margin-top:12px;line-height:1.7;">
+            Fokus studi pada pemrograman mikrokontroler, jaringan komputer, dan sistem embedded IoT.
+            Tugas akhir mengembangkan sistem kendali nutrisi berbasis Fuzzy Logic &amp; IoT untuk Smart Showcase Hidroponik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <span class="eyebrow">02 — Experience</span>
-  <h2 class="reveal">Professional Experience</h2>
-  <div class="timeline reveal">
-    <div class="tl-item">
-      <div class="tl-head"><h3>IT Support</h3><span class="date">30 Juni 2025 – Sekarang</span></div>
-      <div class="tl-org">PT. Amartha Manunggal Prima (IDExpress) · 📍 Palembang, Sumatera Selatan</div>
-      <ul>
-        <li>Techincal Support</li>
-        <li>Ticketing System Management</li>
-        <li>User Management</li>
-        <li>Remote Support</li>
-        <li>OS Installation & Troubleshooting (Windows & Linux)</li>
-        <li>Network Administration</li>
-        <li>CCTV Technician</li>
-        
-      </ul>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">03 — Experience</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">Professional Experience</h2>
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-head">
+          <h3>IT Support</h3>
+          <span class="tl-date tl-date-accent">Jun 2025 – Sekarang</span>
+        </div>
+        <div class="tl-org">PT. Amartha Manunggal Prima (IDExpress) · 📍 Palembang, Sumatera Selatan</div>
+        <ul>
+          <li>Maintenance &amp; troubleshooting hardware, software, PC, printer, dan Honeywell RF scanner</li>
+          <li>Instalasi, konfigurasi, dan troubleshooting OS Windows dan Linux</li>
+          <li>Mengelola ticketing system dan remote support untuk menangani isu IT di kantor cabang Sumbagsel</li>
+          <li>Manajemen akun pengguna dan hak akses melalui OMS IDExpress</li>
+          <li>Desain dan implementasi topologi jaringan LAN</li>
+          <li>Manajemen infrastruktur jaringan: Router, PoE Switch, dan Hub</li>
+          <li>Konfigurasi access control: MAC filtering dan domain filtering pada modem Huawei Orbit</li>
+          <li>Konfigurasi MikroTik router: IP management, firewall, dan segmentasi jaringan</li>
+          <li>Instalasi, maintenance, dan troubleshooting sistem &amp; infrastruktur CCTV</li>
+          <li>Monitoring CCTV terpusat dan manajemen perangkat melalui EZCloud untuk area Sumbagsel</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </section>
+
+<hr class="section-divider">
 
 <!-- SKILLS -->
 <section id="skills">
-  <span class="eyebrow">03 — Skills</span>
-  <h2 class="reveal">Technical Skills</h2>
-  <div class="skill-groups reveal">
-    <div class="skill-group">
-      <h4>// IoT &amp; Embedded</h4>
-      <div class="skill-row"><div class="label"><span>Microcontroller</span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>Arduino IDE</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>Sensor Integration</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-    </div>
-    <div class="skill-group">
-      <h4>// Network &amp; Infrastructure</h4>
-      <div class="skill-row"><div class="label"><span>LAN Switching</span><span>90%</span></div><div class="bar"><i style="width:90%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>Routing</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>CCTV Infra (NVR/DVR)</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-    </div>
-    <div class="skill-group">
-      <h4>// Technical Support</h4>
-      <div class="skill-row"><div class="label"><span>Maintenance &amp; Troubleshooting</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>Installation &amp; Configuration</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>User Management</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
-    </div>
-    <div class="skill-group">
-      <h4>// Web Development</h4>
-      <div class="skill-row"><div class="label"><span>HTML5</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>CSS3</span><span>85%</span></div><div class="bar"><i style="width:85%"></i></div></div>
-      <div class="skill-row"><div class="label"><span>JavaScript</span><span>80%</span></div><div class="bar"><i style="width:80%"></i></div></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">04 — Skills</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">Technical Skills</h2>
+    <div class="skill-groups reveal" id="skillGroups">
+      <div class="card skill-group sg-accent">
+        <h4>// Technical & User Support</h4>
+        <div class="skill-row"><div class="label"><span>Hardware Troubleshooting</span><span>90%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="90"></div></div></div>
+        <div class="skill-row"><div class="label"><span>OS Installation (Win & Linux)</span><span>88%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="88"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Ticketing System</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Remote Support</span><span>83%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="83"></div></div></div>
+        <div class="skill-row"><div class="label"><span>User & Access Management</span><span>82%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="82"></div></div></div>
+      </div>
+      <div class="card skill-group sg-accent">
+        <h4>// Network & Infrastructure</h4>
+        <div class="skill-row"><div class="label"><span>LAN Design & Implementation</span><span>88%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="88"></div></div></div>
+        <div class="skill-row"><div class="label"><span>MikroTik (IP, Firewall, NAT)</span><span>82%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="82"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Router, PoE Switch, Hub</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>CCTV System (EZCloud/DVR/NVR)</span><span>87%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="87"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Access Control & MAC Filtering</span><span>80%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="80"></div></div></div>
+      </div>
+      <div class="card skill-group sg-accent">
+        <h4>// IoT & Embedded Systems</h4>
+        <div class="skill-row"><div class="label"><span>Microcontroller (ESP8266/Arduino)</span><span>90%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="90"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Sensor Integration</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Fuzzy Logic System</span><span>82%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="82"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Arduino IDE</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+      </div>
+      <div class="card skill-group sg-accent">
+        <h4>// Web & Productivity</h4>
+        <div class="skill-row"><div class="label"><span>HTML5</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>CSS3</span><span>85%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>JavaScript</span><span>80%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="80"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Microsoft Office</span><span>82%</span></div><div class="bar"><div class="bar-fill bar-fill-accent" data-w="82"></div></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH / PROJECT -->
+<hr class="section-divider">
+
+<!-- RESEARCH -->
 <section id="research">
-  <span class="eyebrow">04 — Research</span>
-  <h2 class="reveal">Tugas Akhir / Proyek Riset</h2>
-  <div class="card project-card reveal">
-    <h3>Rancang Bangun Sistem Kendali Nutrisi Berbasis Fuzzy Logic &amp; IoT pada Smart Showcase Hidroponik</h3>
-    <p>Proyek ini merancang sistem kontrol nutrisi berbasis logika fuzzy dan Internet of Things (IoT) untuk sistem hidroponik Smart Showcase.
-      Sistem ini mampu secara otomatis mengatur pasokan nutrisi cair AB Mix sesuai dengan tahapan pertumbuhan tanaman, 
-      mulai dari fase awal, fase pertumbuhan, hingga fase pra-panen, dengan mempertimbangkan nilai pH air dan ppm pada setiap tahapan.</p>
-    <div class="result-grid">
-      <div class="result-box"><b>1,24%</b><span>Error rate Sensor TDS meter</span></div>
-      <div class="result-box"><b>1.18%</b><span>Error rate Sensor pH meter</span></div>
-      <div class="result-box"><b>1,175%</b><span>Error rate Fuzzy logic</span></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">05 — Research</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">Tugas Akhir</h2>
+    <div class="card research-card reveal">
+      <h3>Rancang Bangun Sistem Kendali Nutrisi Berbasis Fuzzy Logic &amp; IoT pada Smart Showcase Hidroponik</h3>
+      <div class="tech-stack">
+        <span class="tech-badge">NodeMCU ESP8266</span>
+        <span class="tech-badge">Fuzzy Logic</span>
+        <span class="tech-badge">IoT</span>
+        <span class="tech-badge">Sensor pH</span>
+        <span class="tech-badge">Sensor TDS</span>
+        <span class="tech-badge">Arduino IDE</span>
+        <span class="tech-badge">AB Mix Nutrisi</span>
+      </div>
+      <p style="margin-top:16px;">
+        Merancang sistem kontrol nutrisi berbasis logika fuzzy dan IoT untuk sistem hidroponik Smart Showcase.
+        Sistem secara otomatis mengatur pasokan nutrisi cair AB Mix sesuai tahapan pertumbuhan tanaman
+        (fase awal, pertumbuhan, pra-panen) dengan mempertimbangkan nilai pH dan kadar PPM air secara real-time.
+      </p>
+      <div class="result-grid">
+        <div class="result-box"><b>1.24%</b><span>Error rate Sensor TDS</span></div>
+        <div class="result-box"><b>1.18%</b><span>Error rate Sensor pH</span></div>
+        <div class="result-box"><b>1.175%</b><span>Error rate Fuzzy Logic</span></div>
+      </div>
     </div>
   </div>
 </section>
+
+<hr class="section-divider">
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
-  <span class="eyebrow">05 — Certifications</span>
-  <h2 class="reveal">Awards &amp; Certificates</h2>
-  <div class="cert-grid reveal">
-    <div class="card cert-card">
-      <div class="cert-icon">🏆</div>
-      <div>
-        <span class="cert-date">Oktober 2024</span>
-        <h4>1st Place in DIPNOVA FEST 2024 Seminar</h4>
-        <p>Diselenggarakan oleh: Fakultas ilmu komputer</p>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">06 — Certifications</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:32px;">Awards &amp; Certificates</h2>
+    <div class="cert-grid reveal">
+      <div class="card cert-card">
+        <div class="cert-icon-wrap cert-icon-accent">🏆</div>
+        <div>
+          <span class="cert-date cert-date-accent">Oktober 2024</span>
+          <h4>1st Place — DIPNOVA FEST 2024</h4>
+          <p>Diselenggarakan oleh Fakultas Ilmu Komputer</p>
+        </div>
       </div>
-    </div>
-    <div class="card cert-card">
-      <div class="cert-icon">📜</div>
-      <div>
-        <span class="cert-date">November 2022</span>
-        <h4>Graphic Design Seminar</h4>
-        <p>Diterbitkan oleh: 005/UN9.19.HIMDIKO/KM2022</p>
+      <div class="card cert-card">
+        <div class="cert-icon-wrap cert-icon-accent">🎨</div>
+        <div>
+          <span class="cert-date cert-date-accent">November 2022</span>
+          <h4>Graphic Design Seminar</h4>
+          <p>005/UN9.19.HIMDIKO/KM2022</p>
+        </div>
       </div>
-    </div>
-     <div class="card cert-card">
-      <div class="cert-icon">📜</div>
-      <div>
-        <span class="cert-date">Oktober 2022</span>
-        <h4>Workshop Cyber Security Seminar, Carnaval 4th IMWORK</h4>
-        <p>Diterbitkan oleh: Universitas Sriwijaya</p>
+      <div class="card cert-card">
+        <div class="cert-icon-wrap cert-icon-accent">🔐</div>
+        <div>
+          <span class="cert-date cert-date-accent">Oktober 2022</span>
+          <h4>Workshop Cyber Security — Carnaval 4th IMWORK</h4>
+          <p>Diterbitkan oleh Universitas Sriwijaya</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<hr class="section-divider">
+
 <!-- CONTACT -->
 <section id="contact">
-  <span class="eyebrow">06 — Contact</span>
-  <h2 class="reveal">Contact me on bellow</h2>
-  <p style="color:var(--text-dim);margin-bottom:30px;max-width:600px;">
-   Terima kasih sudah meninggalkan pesan :D
-  </p>
-  <div class="contact-grid reveal">
-    <div class="contact-links">
-      <a href="mailto:mnaufalm02@gmail.com">✉ mnaufalm02@gmail.com</a>
-      <a href="https://wa.me/6282178093396">☎ +62 821-7809-3396 (WhatsApp)</a>
-      <a href="https://www.linkedin.com/in/muhammad-naufal-maulana-750b5330b/" target="_blank">◈ linkedin.com/in/muhammad-naufal-maulana</a>
-      <a href="https://maps.app.goo.gl/xW1cnhYBZZc1Nv856">⌥ Palembang, Sumatera Selatan, Indonesia 🇮🇩</a>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent)">07 — Contact</span>
+    <h2 class="reveal" style="margin-top:8px;margin-bottom:14px;">Let's Connect</h2>
+    <p style="color:var(--text-dim);margin-bottom:32px;max-width:540px;font-size:15px;">
+      Tertarik berkolaborasi atau ada peluang di bidang IT? Saya terbuka untuk diskusi.
+    </p>
+    <div class="contact-grid reveal">
+      <div class="contact-links">
+        <a href="mailto:mnaufalm02@gmail.com" class="contact-link cl-accent">
+          <span class="contact-icon">✉</span> mnaufalm02@gmail.com
+        </a>
+        <a href="https://wa.me/6282178093396" target="_blank" class="contact-link cl-accent">
+          <span class="contact-icon">💬</span> +62 821-7809-3396 (WhatsApp)
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-naufal-maulana-750b5330b/" target="_blank" class="contact-link cl-accent">
+          <span class="contact-icon">💼</span> linkedin.com/in/muhammad-naufal-maulana
+        </a>
+        <a href="https://maps.app.goo.gl/xW1cnhYBZZc1Nv856" target="_blank" class="contact-link cl-accent">
+          <span class="contact-icon">📍</span> Palembang, Sumatera Selatan 🇮🇩
+        </a>
+      </div>
+      <form id="contactForm">
+        <input type="hidden" name="access_key" value="dbca8a92-6074-465d-a716-8810f6fbfb35">
+        <input type="hidden" name="subject" value="Pesan baru dari Portfolio Naufal">
+        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="name" placeholder="Nama Anda" required>
+        <input type="email" name="email" placeholder="email@domain.com" required>
+        <textarea name="message" placeholder="Pesan..." required></textarea>
+        <button type="submit" class="btn btn-accent" id="submitBtn">Kirim Pesan →</button>
+        <p id="formStatus" style="font-size:13px;margin-top:8px;"></p>
+      </form>
     </div>
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-      <!-- Ganti YOUR_ACCESS_KEY_HERE dengan Access Key dari web3forms.com -->
-      <input type="hidden" name="access_key" value="dbca8a92-6074-465d-a716-8810f6fbfb35">
-      <input type="hidden" name="subject" value="Pesan baru dari Portfolio Website">
-      <input type="hidden" name="from_name" value="Portfolio Contact Form">
-      <!-- Anti-spam honeypot, biarkan tersembunyi -->
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="email@domain.com" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit" class="btn btn-primary" id="submitBtn">Send Message →</button>
-      <p id="formStatus" style="font-size:13px;margin-top:6px;"></p>
-    </form>
   </div>
 </section>
 
 <footer>
-  © <span id="year"></span> Muhammad Naufal Maulana. All rights reserved. Palembang, Indonesia 🇮🇩
+  <div class="container">
+    © <span id="year"></span> Muhammad Naufal Maulana · Palembang, Indonesia 🇮🇩 ·
+    <a href="https://www.linkedin.com/in/muhammad-naufal-maulana-750b5330b/" target="_blank">LinkedIn</a>
+  </div>
 </footer>
 
 <button class="back-top" id="backTop">↑</button>
 
 <script>
-  // Tahun otomatis di footer
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Toggle menu mobile
-  const menuBtn = document.getElementById('menuBtn');
-  const navLinks = document.getElementById('navLinks');
-  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=> navLinks.classList.remove('open'));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  const themeBtn=document.getElementById('themeBtn');
+  let isLight=false;
+  themeBtn.addEventListener('click',()=>{
+    isLight=!isLight;
+    document.documentElement.setAttribute('data-theme',isLight?'light':'');
+    themeBtn.textContent=isLight?'☀️':'🌙';
   });
-
-  // Dark/Light theme toggle (tersimpan di memori sesi saja)
-  const themeBtn = document.getElementById('themeBtn');
-  let isLight = false;
-  themeBtn.addEventListener('click', () => {
-    isLight = !isLight;
-    document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
-    themeBtn.textContent = isLight ? '☀️' : '🌙';
-  });
-
-  // Tombol back-to-top muncul saat scroll
-  const backTop = document.getElementById('backTop');
-  window.addEventListener('scroll', () => {
-    backTop.classList.toggle('show', window.scrollY > 400);
-  });
-  backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-  // Kirim form contact ke Web3Forms tanpa reload halaman
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const formStatus = document.getElementById('formStatus');
-
-  contactForm.addEventListener('submit', async function(e){
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    formStatus.textContent = '';
-
-    const formData = new FormData(contactForm);
-    try{
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      });
-      const result = await response.json();
-
-      if(result.success){
-        formStatus.style.color = 'var(--accent)';
-        formStatus.textContent = '✅ Pesan terkirim! Terima kasih, saya akan segera membalas.';
-        contactForm.reset();
-      } else {
-        formStatus.style.color = '#e25555';
-        formStatus.textContent = '❌ Gagal mengirim. Coba lagi atau hubungi lewat email langsung.';
-      }
-    } catch(err){
-      formStatus.style.color = '#e25555';
-      formStatus.textContent = '❌ Terjadi kesalahan koneksi. Coba lagi nanti.';
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message →';
-    }
-  });
-
-  // Reveal animasi saat elemen masuk viewport
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries)=>{
+  const backTop=document.getElementById('backTop');
+  window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>400));
+  backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  const observer=new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.classList.add('in');
+        entry.target.querySelectorAll('.bar-fill').forEach(bar=>{bar.style.width=bar.dataset.w+'%';});
         observer.unobserve(entry.target);
       }
     });
-  }, {threshold:0.15});
-  revealEls.forEach(el=>observer.observe(el));
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const contactForm=document.getElementById('contactForm');
+  const submitBtn=document.getElementById('submitBtn');
+  const formStatus=document.getElementById('formStatus');
+  contactForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    submitBtn.disabled=true;
+    submitBtn.textContent='Mengirim...';
+    formStatus.textContent='';
+    const formData=new FormData(contactForm);
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:formData});
+      const result=await res.json();
+      if(result.success){
+        formStatus.style.color='var(--accent)';
+        formStatus.textContent='✅ Pesan terkirim! Terima kasih, saya akan segera membalas.';
+        contactForm.reset();
+      }else{
+        formStatus.style.color='#e25555';
+        formStatus.textContent='❌ Gagal mengirim. Coba lagi atau hubungi lewat email langsung.';
+      }
+    }catch(err){
+      formStatus.style.color='#e25555';
+      formStatus.textContent='❌ Kesalahan koneksi. Coba lagi nanti.';
+    }finally{
+      submitBtn.disabled=false;
+      submitBtn.textContent='Kirim Pesan →';
+    }
+  });
 </script>
-
 </body>
 </html>
